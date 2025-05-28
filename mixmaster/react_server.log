@@ -48,3 +48,174 @@ ERROR in ./src/components/Sidebar.js 6:0-43
 Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/mixmaster-102939-b128bcb9/mixmaster/src/components'
 
 webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/mixmaster-102939-b128bcb9/mixmaster/src'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/kavia/workspace/code-generation/mixmaster-102939-b128bcb9/mixmaster/node_modules/react-router-dom isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 13 hidden lines
+
+ERROR in ./src/App.js 6:0-84
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/mixmaster-102939-b128bcb9/mixmaster/src'
+
+ERROR in ./src/components/Sidebar.js 6:0-43
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/mixmaster-102939-b128bcb9/mixmaster/src/components'
+
+webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+Attempted import error: 'BrowserRouter' is not exported from 'react-router-dom' (imported as 'Router').
+ERROR in ./src/App.js 27:30-36
+export 'BrowserRouter' (imported as 'Router') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 36:39-45
+export 'Routes' (imported as 'Routes') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 37:42-47
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 39:42-50
+export 'Navigate' (imported as 'Navigate') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 51:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 69:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 87:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 105:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 123:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 141:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 159:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 177:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 195:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 197:42-50
+export 'Navigate' (imported as 'Navigate') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/components/Sidebar.js 80:41-48
+export 'NavLink' (imported as 'NavLink') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./node_modules/react-router-dom/dist/index.mjs 13:0-66
+Module not found: Error: Can't resolve 'react-router/dom' in '/home/kavia/workspace/code-generation/mixmaster-102939-b128bcb9/mixmaster/node_modules/react-router-dom/dist'
+
+ERROR in ./node_modules/react-router-dom/dist/index.mjs 14:0-29
+Module not found: Error: Can't resolve 'react-router' in '/home/kavia/workspace/code-generation/mixmaster-102939-b128bcb9/mixmaster/node_modules/react-router-dom/dist'
+
+webpack compiled with 17 errors
+Compiling...
+Failed to compile.
+
+Attempted import error: 'BrowserRouter' is not exported from 'react-router-dom' (imported as 'Router').
+ERROR in ./src/App.js 27:30-36
+export 'BrowserRouter' (imported as 'Router') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 36:39-45
+export 'Routes' (imported as 'Routes') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 37:42-47
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 39:42-50
+export 'Navigate' (imported as 'Navigate') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 51:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 69:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 87:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 105:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 123:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 141:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 159:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 177:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 195:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 197:42-50
+export 'Navigate' (imported as 'Navigate') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/components/Sidebar.js 80:41-48
+export 'NavLink' (imported as 'NavLink') was not found in 'react-router-dom' (module has no exports)
+
+webpack compiled with 15 errors
+Compiling...
+Failed to compile.
+
+Attempted import error: 'BrowserRouter' is not exported from 'react-router-dom' (imported as 'Router').
+ERROR in ./src/App.js 27:30-36
+export 'BrowserRouter' (imported as 'Router') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 36:39-45
+export 'Routes' (imported as 'Routes') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 37:42-47
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 39:42-50
+export 'Navigate' (imported as 'Navigate') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 51:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 69:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 87:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 105:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 123:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 141:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 159:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 177:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 195:41-46
+export 'Route' (imported as 'Route') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/App.js 197:42-50
+export 'Navigate' (imported as 'Navigate') was not found in 'react-router-dom' (module has no exports)
+
+ERROR in ./src/components/Sidebar.js 80:41-48
+export 'NavLink' (imported as 'NavLink') was not found in 'react-router-dom' (module has no exports)
+
+webpack compiled with 15 errors
