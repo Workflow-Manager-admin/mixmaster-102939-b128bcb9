@@ -1,6 +1,9 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import "../App.css";
+import { useFavorites } from "../features/FavoritesProvider";
+import { useShoppingList } from "../features/FavoritesProvider";
+import { useNavigate } from "react-router-dom";
 
 /**
  * MainLayout component wraps content in sidebar + navbar + responsive card grid.
