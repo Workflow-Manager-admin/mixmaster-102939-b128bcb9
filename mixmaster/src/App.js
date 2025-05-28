@@ -1,77 +1,107 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import MainLayout from './components/MainLayout';
 import Sidebar from './components/Sidebar';
 import './components/Sidebar.css';
 
-function App() {
-  // For demonstration: switch hero content by sidebar navigation
-  const [activeSection, setActiveSection] = useState("explorer");
+// Feature pages
+import Explorer from './features/Explorer';
+import CocktailGenerator from './features/CocktailGenerator';
+import Search from './features/Search';
+import Favorites from './features/Favorites';
+import Trending from './features/Trending';
+import Pairings from './features/Pairings';
+import ShoppingList from './features/ShoppingList';
+import AIBartender from './features/AIBartender';
 
-  // Dummy content for each section (replace with real containers later)
-  const sections = {
-    explorer: {
-      title: "Liquor & Mixer Explorer",
-      desc: "Browse various liquor types (Whiskey, Gin, Tequila...), view descriptions, recommended mixers, and cocktail suggestions."
-    },
-    generator: {
-      title: "Cocktail Generator",
-      desc: "Generate cocktail recipes based on selected liquor and preferences. Get ingredients and recipe steps instantly!"
-    },
-    search: {
-      title: "Smart Search",
-      desc: "Search for liquors and cocktails by name. Discover drink details, mix ideas, and suggestions."
-    },
-    favorites: {
-      title: "Favorites & Shopping List",
-      desc: "Save favorite cocktails and add missing ingredients to your personal shopping list for easy planning."
-    },
-    trending: {
-      title: "Trending & Seasonal Mixes",
-      desc: "See what's hot: trending cocktails and themed suggestions for every season and vibe."
-    },
-    pairings: {
-      title: "Liquor Pairings",
-      desc: "Find the perfect food pairings for your favorite drinks, enhancing every sip and snack."
-    },
-    "ai-bartender": {
-      title: "AI Bartender",
-      desc: "Ask our AI what cocktails you can make – personalized drink ideas and interactive help at your service."
-    },
-  };
+function App() {
+  // Sidebar navigation is handled by <NavLink> in Sidebar now.
+  // MainLayout includes navbar, sidebar, and renders content.
+
+  // Render main routes inside MainLayout. Sidebar itself can be rendered inside MainLayout or App for proper layout (app-has-sidebar).
 
   return (
-    <div className="app app-has-sidebar">
-      <Sidebar onNavigate={setActiveSection} />
-
-      <div className="main-content">
-        <nav className="navbar">
-          <div className="container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-              <div className="logo">
-                <span className="logo-symbol">*</span> KAVIA AI
-              </div>
-              <button className="btn">Template Button</button>
-            </div>
-          </div>
-        </nav>
-
-        <main>
-          <div className="container">
-            <div className="hero">
-              <div className="subtitle">{sections[activeSection].title}</div>
-              
-              <h1 className="title">mixmaster</h1>
-              
-              <div className="description">
-                {sections[activeSection].desc}
-              </div>
-              
-              <button className="btn btn-large">Button</button>
-            </div>
-          </div>
-        </main>
+    <Router>
+      <div className="app app-has-sidebar">
+        {/* Sidebar navigation uses NavLink-based buttons for route navigation */}
+        <Sidebar />
+        <div className="main-content">
+          <Routes>
+            <Route
+              path="/"
+              element={<Navigate to="/explorer" replace />}
+            />
+            <Route
+              path="/explorer"
+              element={
+                <MainLayout title="Liquor & Mixer Explorer">
+                  <Explorer />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/generator"
+              element={
+                <MainLayout title="Cocktail Generator">
+                  <CocktailGenerator />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/search"
+              element={
+                <MainLayout title="Smart Search">
+                  <Search />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/favorites"
+              element={
+                <MainLayout title="Favorites & Shopping List">
+                  <Favorites />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/trending"
+              element={
+                <MainLayout title="Trending & Seasonal Mixes">
+                  <Trending />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/pairings"
+              element={
+                <MainLayout title="Liquor Pairings">
+                  <Pairings />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/shopping-list"
+              element={
+                <MainLayout title="Shopping List">
+                  <ShoppingList />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/ai-bartender"
+              element={
+                <MainLayout title="AI Bartender">
+                  <AIBartender />
+                </MainLayout>
+              }
+            />
+            {/* Unknown routes redir to main */}
+            <Route path="*" element={<Navigate to="/explorer" replace />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
