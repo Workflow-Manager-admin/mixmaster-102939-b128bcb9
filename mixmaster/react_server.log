@@ -19,3 +19,39 @@ To create a production build, use npm run build.
 
 webpack compiled successfully
 Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/MainLayout.js
+  Line 45:20:  'FavoritesTopBarShortcuts' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+ERROR in [eslint] 
+src/components/MainLayout.js
+  Line 45:20:  'FavoritesTopBarShortcuts' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/MainLayout.js
+  Line 65:1:  Import in body of module; reorder to top  import/first
+  Line 66:1:  Import in body of module; reorder to top  import/first
+  Line 67:1:  Import in body of module; reorder to top  import/first
+
+Search for the keywords to learn more about each error.
+ERROR in [eslint] 
+src/components/MainLayout.js
+  Line 65:1:  Import in body of module; reorder to top  import/first
+  Line 66:1:  Import in body of module; reorder to top  import/first
+  Line 67:1:  Import in body of module; reorder to top  import/first
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error

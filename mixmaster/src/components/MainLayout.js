@@ -62,4 +62,74 @@ function MainLayout({
   );
 }
 
+import { useFavorites } from "../features/FavoritesProvider";
+import { useShoppingList } from "../features/FavoritesProvider";
+import { useNavigate } from "react-router-dom";
+
+// Top bar shortcut buttons for Favorites and Shopping List
+function FavoritesTopBarShortcuts() {
+  const navigate = useNavigate();
+  const { favoriteIds } = useFavorites();
+  const { shoppingList } = useShoppingList();
+
+  return (
+    <>
+      <button
+        className="btn"
+        aria-label={`View Favorites (${favoriteIds.length})`}
+        onClick={() => navigate("/favorites")}
+        style={{ position: "relative" }}
+      >
+        <span role="img" aria-label="Favorites">❤️</span>
+        {favoriteIds.length > 0 && (
+          <span style={{
+            position: "absolute",
+            top: -7,
+            right: -7,
+            background: "#F67280",
+            color: "#fff",
+            fontSize: "0.8em",
+            borderRadius: "50%",
+            minWidth: 21,
+            minHeight: 21,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "0 6px",
+          }}>
+            {favoriteIds.length}
+          </span>
+        )}
+      </button>
+      <button
+        className="btn"
+        aria-label={`View Shopping List (${shoppingList.length})`}
+        onClick={() => navigate("/shopping-list")}
+        style={{ position: "relative" }}
+      >
+        <span role="img" aria-label="Shopping List">🛒</span>
+        {shoppingList.length > 0 && (
+          <span style={{
+            position: "absolute",
+            top: -7,
+            right: -7,
+            background: "#F67280",
+            color: "#fff",
+            fontSize: "0.8em",
+            borderRadius: "50%",
+            minWidth: 21,
+            minHeight: 21,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "0 6px",
+          }}>
+            {shoppingList.length}
+          </span>
+        )}
+      </button>
+    </>
+  );
+}
+
 export default MainLayout;
