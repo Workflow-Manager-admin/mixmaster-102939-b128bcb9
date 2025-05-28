@@ -219,23 +219,83 @@ body {
   margin-bottom: 16px;
 }
 
+/* Unified Brand Button Styling */
 .btn {
-  background-color: var(--kavia-orange);
-  color: white;
+  background: linear-gradient(
+    96deg, 
+    var(--brand-accent) 0%, 
+    #fb8f99 85%, 
+    var(--brand-accent) 100%
+  );
+  color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
+  border-radius: 7px;
+  padding: 11px 22px;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  box-shadow: 0 1.5px 7px 0 rgba(246, 114, 128, 0.14);
+  transition: background 0.14s, box-shadow 0.14s, transform 0.08s;
+  outline: none;
 }
-
-.btn:hover {
-  background-color: #FF8B4D;
+.btn:hover, .btn:focus {
+  opacity: 0.97;
+  background: linear-gradient(
+    96deg,
+    var(--kavia-orange) 0%,
+    var(--brand-accent) 100%
+  );
+  box-shadow: 0 3px 14px 0 var(--brand-accent), 0 0.5px 0.5px var(--card-title);
+  transform: translateY(-1.5px) scale(1.025);
 }
-
+.btn:active {
+  opacity: 0.89;
+  transform: scale(0.98);
+  box-shadow: 0 1px 4px 0 var(--brand-accent);
+}
 .btn-large {
-  padding: 12px 24px;
-  font-size: 1.1rem;
+  padding: 15px 29px;
+  font-size: 1.13rem;
+  border-radius: 8px;
+}
+/* Button ghost/accent-outline version */
+.btn-ghost, .btn-outline {
+  background: transparent;
+  border: 2.2px solid var(--brand-accent);
+  color: var(--brand-accent);
+  font-weight: 600;
+  border-radius: 7px;
+  transition: background 0.13s, color 0.13s;
+}
+.btn-ghost:hover, .btn-outline:hover {
+  background: var(--brand-accent);
+  color: #fff;
+}
+
+/* Nicer input field for modern look */
+input[type="text"]:not(.mm-card), input[type="search"] {
+  background: var(--card-bg);
+  border: 2.1px solid var(--brand-accent);
+  color: #fff;
+  border-radius: 5.5px;
+  font-size: 1.08em;
+  padding: 10px 13px;
+  outline: none;
+  transition: border 0.13s;
+  font-weight: 500;
+  box-shadow: 0 0.5px 2.5px 0 rgba(30, 26, 60, 0.08);
+}
+input[type="text"]:focus, input[type="search"]:focus {
+  border-color: var(--kavia-orange);
+}
+
+/* Unify scrollbar for sidebar/main/content (Webkit, fallback) */
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--kavia-main-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-accent);
+  border-radius: 5px;
 }
