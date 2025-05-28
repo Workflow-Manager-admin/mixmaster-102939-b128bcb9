@@ -23,10 +23,11 @@ function Sidebar() {
   return (
     <aside className={`sidebar${collapsed ? " collapsed" : ""}`}>
       <div className="sidebar-header">
-        <span className="sidebar-logo" title="MixMaster">🍸</span>
+        <span className="sidebar-logo" title="MixMaster" style={{ color: "var(--brand-accent)" }}>🍸</span>
         <button
           className="sidebar-toggle"
           aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+          tabIndex={0}
           onClick={() => setCollapsed((val) => !val)}
         >
           {collapsed ? "»" : "«"}
