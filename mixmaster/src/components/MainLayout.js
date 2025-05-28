@@ -41,7 +41,9 @@ function MainLayout({
               {navbarContent ? (
                 <div>{navbarContent}</div>
               ) : (
-                <button className="btn">Template Button</button>
+                <div style={{ display: "flex", gap: "10px" }}>
+                  <FavoritesTopBarShortcuts />
+                </div>
               )}
             </div>
           </div>
