@@ -1,18 +1,18 @@
 .sidebar {
   --sidebar-width: 210px;
-  --sidebar-bg: #1A1A2E;
-  --sidebar-bg-dark: #16213E;
-  --sidebar-accent: #F67280;
+  --sidebar-bg: var(--brand-primary);
+  --sidebar-bg-dark: var(--brand-secondary);
+  --sidebar-accent: var(--brand-accent);
   background: var(--sidebar-bg);
   width: var(--sidebar-width);
   min-width: var(--sidebar-width);
   min-height: 100vh;
   height: 100vh;
-  box-shadow: 2px 0 9px 0 rgba(0,0,0,0.11);
+  box-shadow: 2px 0 11px 0 rgba(22, 33, 62, 0.21);
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  transition: width 0.18s cubic-bezier(.6,-0.28,.74,.05);
+  transition: width 0.18s cubic-bezier(.6,-0.28,.74,.05), background 0.16s;
   z-index: 120;
   position: relative;
 }
