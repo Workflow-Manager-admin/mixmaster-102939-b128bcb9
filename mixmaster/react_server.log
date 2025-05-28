@@ -151,3 +151,6 @@ src/components/MainLayout.js
   Line 68:9:  Parsing error: Identifier 'useFavorites' has already been declared. (68:9)
 
 webpack compiled with 2 errors
+Compiling...
+Compiled successfully!
+webpack compiled successfully

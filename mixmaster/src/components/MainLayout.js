@@ -65,10 +65,7 @@ function MainLayout({
   );
 }
 
-import { useFavorites } from "../features/FavoritesProvider";
-import { useShoppingList } from "../features/FavoritesProvider";
-import { useNavigate } from "react-router-dom";
-
+ 
 // Top bar shortcut buttons for Favorites and Shopping List
 function FavoritesTopBarShortcuts() {
   const navigate = useNavigate();
