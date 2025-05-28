@@ -61,13 +61,11 @@ function ShoppingList() {
               {availableSuggestions.slice(0, 7).map((sug, i) => (
                 <button
                   key={sug.id}
-                  className="btn"
+                  className="btn btn-ghost"
                   style={{
-                    backgroundColor: "#16213E",
-                    color: "#fff",
-                    fontSize: "0.92em",
-                    marginRight: 5,
+                    marginRight: 6,
                     marginBlock: 2,
+                    fontSize: "0.94em"
                   }}
                   onClick={() => addToShoppingList(sug.name)}
                   type="button"
