@@ -36,13 +36,13 @@ function ShoppingList() {
         >
           <input
             type="text"
-            className="mm-card"
             style={{
               width: 200,
-              background: "#fff",
-              color: "#1A1A2E",
-              border: "2px solid #ccc",
-              padding: "6px 12px",
+              background: "var(--card-bg)",
+              color: "#fff",
+              border: "2px solid var(--kavia-accent)",
+              borderRadius: "6px",
+              padding: "9px 14px",
               fontSize: "1em"
             }}
             placeholder="Add item (e.g. Gin)"
