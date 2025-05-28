@@ -1,0 +1,115 @@
+.sidebar {
+  --sidebar-width: 210px;
+  --sidebar-bg: #1A1A2E;
+  --sidebar-bg-dark: #16213E;
+  --sidebar-accent: #F67280;
+  background: var(--sidebar-bg);
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  min-height: 100vh;
+  height: 100vh;
+  box-shadow: 2px 0 9px 0 rgba(0,0,0,0.11);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: width 0.18s cubic-bezier(.6,-0.28,.74,.05);
+  z-index: 120;
+  position: relative;
+}
+
+.sidebar.collapsed {
+  width: 64px;
+  min-width: 64px;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 16px 14px 18px;
+}
+.sidebar-logo {
+  color: var(--sidebar-accent);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 6px;
+  flex: 1 1;
+}
+.sidebar-toggle {
+  background: transparent;
+  border: none;
+  color: var(--sidebar-accent);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.15s;
+  margin-left: 5px;
+}
+.sidebar-toggle:hover {
+  color: #fff;
+}
+.sidebar-nav {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-link {
+  width: 100%;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  color: #fff;
+  padding: 11px 18px 11px 18px;
+  cursor: pointer;
+  transition: background 0.16s, color 0.11s;
+  gap: 12px;
+  outline: none;
+}
+.sidebar-link:focus,
+.sidebar-link:hover {
+  background: var(--sidebar-bg-dark);
+  color: var(--sidebar-accent);
+}
+.sidebar-icon {
+  font-size: 1.35rem;
+  color: var(--sidebar-accent);
+  width: 28px;
+  display: inline-block;
+  text-align: center;
+}
+
+.sidebar-label {
+  transition: opacity 0.18s;
+}
+
+.sidebar.collapsed .sidebar-label {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100dvh;
+    height: 100dvh;
+    width: 0;
+    min-width: 0;
+    overflow: hidden;
+    z-index: 200;
+    background: var(--sidebar-bg);
+    box-shadow: 2px 0 12px 0 rgba(0,0,0,0.22);
+    transition: width 0.18s, min-width 0.18s;
+  }
+  .sidebar,
+  .sidebar.collapsed {
+    width: 64px;
+    min-width: 64px;
+  }
+}
