@@ -1,22 +1,23 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 
 // PUBLIC_INTERFACE
-function Sidebar({ onNavigate = () => {} }) {
+function Sidebar() {
   /**
-   * Sidebar navigation for MixMaster.
-   * Collapsible on mobile, styled with brand colors.
+   * Sidebar navigation for MixMaster, using react-router-dom NavLink for routing.
    */
   const [collapsed, setCollapsed] = useState(false);
 
   const navItems = [
-    { key: "explorer", label: "Explorer", icon: "🌎" },
-    { key: "generator", label: "Generator", icon: "⚡" },
-    { key: "search", label: "Search", icon: "🔍" },
-    { key: "favorites", label: "Favorites", icon: "❤️" },
-    { key: "trending", label: "Trending", icon: "📈" },
-    { key: "pairings", label: "Pairings", icon: "🍽️" },
-    { key: "ai-bartender", label: "AI Bartender", icon: "🤖" },
+    { to: "/explorer", label: "Explorer", icon: "🌎" },
+    { to: "/generator", label: "Generator", icon: "⚡" },
+    { to: "/search", label: "Search", icon: "🔍" },
+    { to: "/favorites", label: "Favorites", icon: "❤️" },
+    { to: "/trending", label: "Trending", icon: "📈" },
+    { to: "/pairings", label: "Pairings", icon: "🍽️" },
+    { to: "/shopping-list", label: "Shopping List", icon: "🛒" },
+    { to: "/ai-bartender", label: "AI Bartender", icon: "🤖" },
   ];
 
   return (
@@ -34,16 +35,20 @@ function Sidebar({ onNavigate = () => {} }) {
       <nav className="sidebar-nav">
         <ul>
           {navItems.map((item) => (
-            <li key={item.key}>
-              <button
-                className="sidebar-link"
-                onClick={() => onNavigate(item.key)}
+            <li key={item.to}>
+              <NavLink
+                to={item.to}
+                className={({ isActive }) =>
+                  "sidebar-link" +
+                  (isActive ? " sidebar-link-active" : "")
+                }
                 aria-label={item.label}
                 tabIndex={0}
+                end={item.to === "/explorer"}
               >
                 <span className="sidebar-icon">{item.icon}</span>
                 {!collapsed && <span className="sidebar-label">{item.label}</span>}
-              </button>
+              </NavLink>
             </li>
           ))}
         </ul>
