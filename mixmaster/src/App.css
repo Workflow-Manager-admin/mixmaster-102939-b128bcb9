@@ -24,6 +24,51 @@ body {
   flex-direction: column;
 }
 
+.app-has-sidebar {
+  flex-direction: row;
+  display: flex;
+}
+
+.main-content {
+  flex: 1 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--kavia-main-bg);
+}
+
+@media (min-width: 700px) {
+  .app-has-sidebar {
+    flex-direction: row;
+    display: flex;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .sidebar + .main-content {
+    /* leave room for sidebar */
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .app-has-sidebar,
+  .app {
+    flex-direction: column;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* Ensure main hero and content don't get hidden behind fixed navbar */
+.main-content .container,
+.container {
+  margin-top: 80px;
+}
+
+
 .navbar {
   background-color: var(--kavia-dark);
   padding: 16px;
