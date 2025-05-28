@@ -6,11 +6,17 @@ import Card from "./Card";
  * Shows a simple vertical list of recent cocktail events (user actions, new drinks, etc).
  * Branded card style, static data for demo.
  */
-// PUBLIC_INTERFACE
 function Feed({ events }) {
   return (
     <div>
-      <h3 style={{ color: "#F67280", margin: "0 0 16px 3px", fontWeight: 500, fontSize: "1.13rem" }}>Real-Time Feed</h3>
+      <h3 style={{
+        color: "var(--brand-accent)",
+        margin: "0 0 16px 3px",
+        fontWeight: 600,
+        fontSize: "1.14rem"
+      }}>
+        Real-Time Feed
+      </h3>
       <div style={{ display: "flex", flexDirection: "column", gap: 13 }}>
         {events.length === 0 ? (
           <Card>
@@ -21,14 +27,17 @@ function Feed({ events }) {
             <Card
               key={idx}
               className="feed-card"
-              style={{ padding: "14px 18px", background: "#1A1A2E" }}
+              style={{
+                padding: "14px 18px",
+                background: "var(--kavia-main-bg-dark)"
+              }}
             >
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <span role="img" aria-label={event.type} style={{ fontSize: 20 }}>{event.emoji}</span>
                 <span>
                   <b>{event.user}</b> {event.action} <b>{event.cocktail}</b>
                   {event.time && (
-                    <span style={{ color: "#aaa", marginLeft: 7, fontSize: ".94em" }}>
+                    <span style={{ color: "var(--text-secondary)", marginLeft: 7, fontSize: ".94em" }}>
                       · {event.time} ago
                     </span>
                   )}
