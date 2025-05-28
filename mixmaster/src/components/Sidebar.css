@@ -69,11 +69,17 @@
   transition: background 0.16s, color 0.11s;
   gap: 12px;
   outline: none;
+  text-decoration: none;
 }
 .sidebar-link:focus,
 .sidebar-link:hover {
   background: var(--sidebar-bg-dark);
   color: var(--sidebar-accent);
+}
+.sidebar-link-active {
+  background: var(--sidebar-bg-dark);
+  color: var(--sidebar-accent) !important;
+  font-weight: bold;
 }
 .sidebar-icon {
   font-size: 1.35rem;
