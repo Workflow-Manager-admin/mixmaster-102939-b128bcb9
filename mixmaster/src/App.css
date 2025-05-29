@@ -208,8 +208,8 @@ body {
 }
 
 .hero {
-  padding-top: 120px;
-  padding-bottom: 64px;
+  padding-top: 108px;
+  padding-bottom: 56px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -217,25 +217,44 @@ body {
   gap: 24px;
 }
 
-.subtitle {
+.title, h1 {
+  font-size: var(--heading-lg);
+  font-weight: var(--font-weight-title) !important;
+  line-height: 1.13;
+  margin: 0 0 12px 0;
+  color: #fff;
+  letter-spacing: 0.004em;
+}
+
+.subtitle, h2 {
   color: var(--kavia-orange);
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--heading-md);
+  letter-spacing: 0.009em;
+  margin: 0 0 8px 0;
+  line-height: 1.222;
 }
 
-.title {
-  font-size: 3.5rem;
-  font-weight: 600;
-  line-height: 1.2;
-  margin: 0;
+h3 {
+  font-size: var(--heading-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--brand-accent);
+  letter-spacing: 0.01em;
+  margin: 0 0 5px 0;
 }
 
-.description {
-  font-size: 1.1rem;
-  line-height: 1.5;
+h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  color: var(--brand-accent);
+  margin: 0 0 4px 0;
+}
+
+.description, p {
+  font-size: 1.07rem;
   color: var(--text-secondary);
+  line-height: 1.70;
   max-width: 600px;
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
 }
 
 /* Unified Brand Button Styling */
