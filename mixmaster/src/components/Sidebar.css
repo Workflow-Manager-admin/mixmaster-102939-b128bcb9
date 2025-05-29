@@ -1,5 +1,5 @@
 .sidebar {
-  --sidebar-width: 212px;
+  --sidebar-width: 196px;
   --sidebar-bg: var(--brand-primary);
   --sidebar-bg-dark: var(--brand-secondary);
   --sidebar-accent: var(--brand-accent);
@@ -12,16 +12,16 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  transition: width 0.19s cubic-bezier(.63,-0.2,.57,1.09), background 0.12s;
+  transition: width 0.17s cubic-bezier(.63,-0.2,.57,1.09), background 0.12s;
   z-index: 120;
   position: relative;
   border-right: 2px solid var(--border-color);
+  touch-action: manipulation;
 }
-
 .sidebar.collapsed {
-  width: 61px;
-  min-width: 61px;
-  transition: width 0.18s;
+  width: 54px;
+  min-width: 54px;
+  transition: width 0.17s;
 }
 .sidebar-header {
   display: flex;
