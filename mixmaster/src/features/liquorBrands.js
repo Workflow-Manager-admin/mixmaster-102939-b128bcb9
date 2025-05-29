@@ -1,14 +1,13 @@
-//
-// Popular liquor brands demo/mock data for MixMaster app
-// Each item: name, type, description, country, image(optional), emoji, and ID.
-//
+// Popular liquor brands and mixers (centralized data for MixMaster app)
+// Each has: id, name, type (category), desc, country, image (URL/empty), emoji
+
 export const LIQUOR_BRANDS = [
-  // Whiskey Brands
+  // --- Whiskey ---
   {
     id: "jack-daniels",
     name: "Jack Daniel's",
     type: "Whiskey",
-    desc: "Famous Tennessee whiskey known for its smoothness and caramel notes.",
+    desc: "Famous Tennessee whiskey, smooth and slightly sweet with oak and caramel notes.",
     country: "USA",
     image: "",
     emoji: "🥃",
@@ -17,7 +16,7 @@ export const LIQUOR_BRANDS = [
     id: "jameson",
     name: "Jameson",
     type: "Whiskey",
-    desc: "Irish whiskey triple-distilled for exceptional smoothness and versatility.",
+    desc: "Classic Irish whiskey, triple-distilled for exceptional smoothness.",
     country: "Ireland",
     image: "",
     emoji: "🇮🇪",
@@ -26,47 +25,17 @@ export const LIQUOR_BRANDS = [
     id: "macallan",
     name: "The Macallan",
     type: "Whiskey",
-    desc: "Premium single malt Scotch with rich sherry-cask flavors.",
+    desc: "Premium single malt Scotch whisky, matured in sherry oak casks.",
     country: "Scotland",
     image: "",
     emoji: "🏴",
   },
-
-  // Gin Brands
-  {
-    id: "bombay-sapphire",
-    name: "Bombay Sapphire",
-    type: "Gin",
-    desc: "London dry gin with bright citrus and 10 botanicals.",
-    country: "UK",
-    image: "",
-    emoji: "🍃",
-  },
-  {
-    id: "tanqueray",
-    name: "Tanqueray",
-    type: "Gin",
-    desc: "Classic London dry gin perfect for martinis and gin & tonics.",
-    country: "UK",
-    image: "",
-    emoji: "🇬🇧",
-  },
-  {
-    id: "beefeater",
-    name: "Beefeater",
-    type: "Gin",
-    desc: "London staple; bold, juniper-forward and great for mixing.",
-    country: "UK",
-    image: "",
-    emoji: "🍸",
-  },
-
-  // Vodka Brands
+  // --- Vodka ---
   {
     id: "grey-goose",
     name: "Grey Goose",
     type: "Vodka",
-    desc: "Ultra-premium French vodka, popular for its smooth clean finish.",
+    desc: "Ultra-premium French vodka, distilled from soft winter wheat.",
     country: "France",
     image: "",
     emoji: "🇫🇷",
@@ -75,7 +44,7 @@ export const LIQUOR_BRANDS = [
     id: "absolut",
     name: "Absolut",
     type: "Vodka",
-    desc: "Swedish vodka, versatile and ideal for creative cocktails.",
+    desc: "Versatile Swedish vodka, ideal for creative cocktails.",
     country: "Sweden",
     image: "",
     emoji: "🧊",
@@ -84,18 +53,45 @@ export const LIQUOR_BRANDS = [
     id: "titos",
     name: "Tito's Handmade",
     type: "Vodka",
-    desc: "Gluten-free American vodka distilled from corn.",
+    desc: "Crafted in Texas, gluten-free, distilled from corn.",
     country: "USA",
     image: "",
     emoji: "🇺🇸",
   },
-
-  // Tequila Brands
+  // --- Gin ---
+  {
+    id: "bombay-sapphire",
+    name: "Bombay Sapphire",
+    type: "Gin",
+    desc: "Bright, modern London Dry Gin distilled with 10 botanicals.",
+    country: "UK",
+    image: "",
+    emoji: "🍃",
+  },
+  {
+    id: "tanqueray",
+    name: "Tanqueray",
+    type: "Gin",
+    desc: "Classic London Dry Gin—juniper forward, crisp, and balanced.",
+    country: "UK",
+    image: "",
+    emoji: "🇬🇧",
+  },
+  {
+    id: "beefeater",
+    name: "Beefeater",
+    type: "Gin",
+    desc: "Quintessential London staple; bold and citrusy, perfect for mixing.",
+    country: "UK",
+    image: "",
+    emoji: "🍸",
+  },
+  // --- Tequila ---
   {
     id: "patron",
     name: "Patrón",
     type: "Tequila",
-    desc: "Premium tequila with sweet citrusy agave notes.",
+    desc: "Premium tequila with smooth, sweet, agave-forward flavor.",
     country: "Mexico",
     image: "",
     emoji: "🌵",
@@ -104,7 +100,7 @@ export const LIQUOR_BRANDS = [
     id: "don-julio",
     name: "Don Julio",
     type: "Tequila",
-    desc: "High-end tequila, expertly crafted and smooth.",
+    desc: "High-end, carefully crafted tequila known for balance and complexity.",
     country: "Mexico",
     image: "",
     emoji: "🥇",
@@ -113,18 +109,17 @@ export const LIQUOR_BRANDS = [
     id: "olmeca-altos",
     name: "Olmeca Altos",
     type: "Tequila",
-    desc: "Popular for classic margaritas; 100% agave and punchy.",
+    desc: "Award-winning 100% agave tequila, perfect for margaritas.",
     country: "Mexico",
     image: "",
     emoji: "🍋",
   },
-
-  // Rum Brands
+  // --- Rum ---
   {
     id: "bacardi",
     name: "Bacardi",
     type: "Rum",
-    desc: "World's most recognized rum, clean and mixable.",
+    desc: "World’s most awarded rum, light and exceptionally mixable.",
     country: "Puerto Rico",
     image: "",
     emoji: "🏝️",
@@ -133,7 +128,7 @@ export const LIQUOR_BRANDS = [
     id: "captain-morgan",
     name: "Captain Morgan",
     type: "Rum",
-    desc: "Iconic spiced rum, sweet and warming.",
+    desc: "Caribbean spiced rum, sweet with cinnamon, vanilla, and clove.",
     country: "Jamaica",
     image: "",
     emoji: "🦜",
@@ -142,11 +137,121 @@ export const LIQUOR_BRANDS = [
     id: "mount-gay",
     name: "Mount Gay",
     type: "Rum",
-    desc: "Historic Barbadian rum with rich, toasty character.",
+    desc: "World’s oldest rum distillery—Barbadian, rich, and warming.",
     country: "Barbados",
     image: "",
     emoji: "🇧🇧",
   },
-
-  // Other major liquors can be added here...
+  // --- Liqueurs ---
+  {
+    id: "cointreau",
+    name: "Cointreau",
+    type: "Liqueur",
+    desc: "Elegant French orange liqueur, triple-sec base for cocktails.",
+    country: "France",
+    image: "",
+    emoji: "🍊",
+  },
+  {
+    id: "baileys",
+    name: "Baileys Irish Cream",
+    type: "Liqueur",
+    desc: "Creamy, sweet blend of Irish whiskey and dairy cream.",
+    country: "Ireland",
+    image: "",
+    emoji: "🥛",
+  },
+  {
+    id: "campari",
+    name: "Campari",
+    type: "Liqueur",
+    desc: "Red Italian bitter liqueur, herbal and citrusy—essential for Negroni.",
+    country: "Italy",
+    image: "",
+    emoji: "🍷",
+  },
+  // --- Wine & Champagne ---
+  {
+    id: "moet-chandon",
+    name: "Moët & Chandon",
+    type: "Sparkling Wine",
+    desc: "Luxurious French Champagne—crisp, dry, and festive.",
+    country: "France",
+    image: "",
+    emoji: "🍾",
+  },
+  {
+    id: "robert-mondavi",
+    name: "Robert Mondavi",
+    type: "Red Wine",
+    desc: "Famous California winery, producing bold cabernets.",
+    country: "USA",
+    image: "",
+    emoji: "🍷",
+  },
+  {
+    id: "kim-crawford",
+    name: "Kim Crawford",
+    type: "White Wine",
+    desc: "Top New Zealand Sauvignon Blanc; fresh and vibrant.",
+    country: "New Zealand",
+    image: "",
+    emoji: "🥂",
+  },
+  // --- Beer ---
+  {
+    id: "heineken",
+    name: "Heineken",
+    type: "Beer",
+    desc: "Crisp, light Dutch lager—one of the world's most popular.",
+    country: "Netherlands",
+    image: "",
+    emoji: "🍺",
+  },
+  {
+    id: "guinness",
+    name: "Guinness",
+    type: "Beer",
+    desc: "Iconic Irish stout—creamy, rich, and instantly recognizable.",
+    country: "Ireland",
+    image: "",
+    emoji: "☘️",
+  },
+  {
+    id: "corona",
+    name: "Corona Extra",
+    type: "Beer",
+    desc: "Classic Mexican pale lager—refreshing and easy-drinking.",
+    country: "Mexico",
+    image: "",
+    emoji: "🌞",
+  },
+  // --- Non-Alcoholic Mixers ---
+  {
+    id: "fever-tree-tonic",
+    name: "Fever-Tree Tonic Water",
+    type: "Mixer",
+    desc: "Premium tonic water with natural quinine and botanicals.",
+    country: "UK",
+    image: "",
+    emoji: "💧",
+  },
+  {
+    id: "canada-dry-ginger-ale",
+    name: "Canada Dry Ginger Ale",
+    type: "Mixer",
+    desc: "Classic ginger ale, gently sweet and sparkling.",
+    country: "Canada",
+    image: "",
+    emoji: "🥤",
+  },
+  {
+    id: "sanpellegrino-sparkling",
+    name: "San Pellegrino Sparkling Water",
+    type: "Mixer",
+    desc: "Refreshing sparkling mineral water from Italy.",
+    country: "Italy",
+    image: "",
+    emoji: "💦",
+  },
 ];
