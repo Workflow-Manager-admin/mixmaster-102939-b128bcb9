@@ -50,3 +50,6 @@ src/features/Search.js
   Line 149:10:  'BrandResultCard' is defined but never used  no-unused-vars
 
 webpack compiled with 1 warning
+Compiling...
+Compiled successfully!
+webpack compiled successfully

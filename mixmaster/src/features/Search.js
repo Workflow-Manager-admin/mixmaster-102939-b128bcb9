@@ -209,12 +209,11 @@ function CocktailResultCard({ cocktail }) {
   );
 }
 
-// PUBLIC_INTERFACE
 /**
  * Search – Smart Search UI for liquor/cocktail lookup.
  * Features:
  * - Search input bar (live, insensitive)
- * - Shows liquors and cocktails matching name, base, or ingredient
+ * - Shows liquors, cocktails, and brands matching name, base, or ingredient
  * - Responsive card grid
  */
 function Search() {
@@ -241,10 +240,22 @@ function Search() {
       (c.ingredients && c.ingredients.some(ing => ing.toLowerCase().includes(searchTerm)))
   );
 
+  // Search brands (centralized data)
+  const matchedBrands = LIQUOR_BRANDS.filter(
+    b =>
+      b.name.toLowerCase().includes(searchTerm) ||
+      (b.type && b.type.toLowerCase().includes(searchTerm)) ||
+      (b.country && b.country.toLowerCase().includes(searchTerm)) ||
+      (b.desc && b.desc.toLowerCase().includes(searchTerm))
+  );
+
   const hasSearch = searchTerm.length > 0;
 
   // Collect unique results (demo only, so small).
-  const foundAny = matchedLiquors.length > 0 || matchedCocktails.length > 0;
+  const foundAny =
+    matchedLiquors.length > 0 ||
+    matchedCocktails.length > 0 ||
+    matchedBrands.length > 0;
 
   return (
     <>
@@ -260,7 +271,7 @@ function Search() {
             value={term}
             autoFocus
             onChange={e => setTerm(e.target.value)}
-            placeholder="Search liquors, cocktails, or mixers…"
+            placeholder="Search liquors, brands, cocktails, or mixers…"
             aria-label="Search liquors and cocktails"
             style={{
               flex: 1,
@@ -289,7 +300,7 @@ function Search() {
           </button>
         </form>
         <div style={{ marginTop: 7, color: "#aaa", fontSize: "0.93em"}}>
-          Try searching by liquor, base, or ingredient: <b>gin</b>, <b>lime</b>, <b>old fashioned</b>, <b>rum</b>, <b>margarita</b>...
+          Try searching by liquor, brand, base, or ingredient: <b>gin</b>, <b>Jameson</b>, <b>sparkling</b>, <b>rum</b>, <b>tequila</b>, <b>moët</b>...
         </div>
       </Card>
 
@@ -303,17 +314,20 @@ function Search() {
             {matchedCocktails.map(cocktail => (
               <CocktailResultCard cocktail={cocktail} key={"coct-" + cocktail.id} />
             ))}
+            {matchedBrands.map(brand => (
+              <BrandResultCard brand={brand} key={"brand-" + brand.id} />
+            ))}
           </div>
         ) : (
           <Card>
-            <span style={{ color: "#bbb" }}>No liquors or cocktails matched your search.</span>
+            <span style={{ color: "#bbb" }}>No liquors, brands, or cocktails matched your search.</span>
           </Card>
         )
       ) : (
         <Card>
           <span style={{ color: "#bbb" }}>
-            Enter a search above to find cocktails or liquors.<br />
-            You can search by name, ingredient, or style.
+            Enter a search above to find cocktails, liquors, or brands.<br />
+            You can search by name, brand, type, ingredient, or country.
           </span>
         </Card>
       )}
