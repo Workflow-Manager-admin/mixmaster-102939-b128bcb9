@@ -110,80 +110,88 @@ function LiquorCard({ liquor }) {
 function Explorer() {
   return (
     <>
-      <Card
-        title={
-          <span>
-            <span role="img" aria-label="explorer" style={{ marginRight: 7 }}>
-              🌎
-            </span>
-            Liquor Categories
-          </span>
-        }
-      >
-        <div style={{ color: "#aaa", fontSize: "1em" }}>
-          Browse classic spirit types and find popular brands below.
-        </div>
-      </Card>
-      {/* Classic liquor categories */}
-      {LIQUOR_DATA.map((liquor) => (
-        <LiquorCard liquor={liquor} key={liquor.id} />
-      ))}
-
-      <Card
-        title={
-          <span>
-            <span role="img" aria-label="brands" style={{ marginRight: 7 }}>
-              🏷️
-            </span>
-            Popular Liquor Brands
-          </span>
-        }
-      >
-        <div style={{ color: "#aaa", fontSize: "1em" }}>
-          Leading whiskies, gins, vodkas, tequilas, and rums from around the world, with country and category.
-        </div>
-      </Card>
-      {/* Brands as card grid */}
-      <div className="mm-card-grid">
-        {LIQUOR_BRANDS.map((brand) => (
+      <div style={{ width: "100%", maxWidth: 900, margin: "0 auto" }}>
+        <div style={{ marginBottom: 0 }}>
           <Card
-            key={brand.id}
             title={
               <span>
-                <span
-                  role="img"
-                  aria-label={brand.name}
-                  style={{ marginRight: 8 }}
-                >
-                  {brand.emoji}
+                <span role="img" aria-label="explorer" style={{ marginRight: 7 }}>
+                  🌎
                 </span>
-                {brand.name}
+                Liquor Categories
               </span>
             }
-            actions={
-              <span style={{ color: "#E87A41", fontSize: ".97em" }}>
-                {brand.type} · {brand.country}
-              </span>
-            }
+            variant="elevated"
           >
-            <div style={{ color: "#bbb", marginBottom: 6 }}>
-              {brand.desc}
+            <div style={{ color: "#aaa", fontSize: "1em", marginBottom: 5 }}>
+              Browse classic spirit types and find popular brands below.
             </div>
-            {/* Image could be shown here if provided */}
-            {brand.image && (
-              <img
-                src={brand.image}
-                alt={brand.name}
-                style={{
-                  width: "100px",
-                  borderRadius: "4px",
-                  margin: "7px 0",
-                  display: "block",
-                }}
-              />
-            )}
           </Card>
-        ))}
+          <div className="mm-card-grid" style={{ marginTop: 0 }}>
+            {LIQUOR_DATA.map((liquor) => (
+              <LiquorCard liquor={liquor} key={liquor.id} />
+            ))}
+          </div>
+          <div style={{ marginTop: 32, marginBottom: 0 }}>
+            <Card
+              title={
+                <span>
+                  <span role="img" aria-label="brands" style={{ marginRight: 7 }}>
+                    🏷️
+                  </span>
+                  Popular Liquor Brands
+                </span>
+              }
+              variant="elevated"
+            >
+              <div style={{ color: "#aaa", fontSize: "1em" }}>
+                Leading whiskies, gins, vodkas, tequilas, and rums from around the world, with country and category.
+              </div>
+            </Card>
+          </div>
+          {/* Brands as card grid */}
+          <div className="mm-card-grid" style={{ marginTop: 0 }}>
+            {LIQUOR_BRANDS.map((brand) => (
+              <Card
+                key={brand.id}
+                title={
+                  <span>
+                    <span
+                      role="img"
+                      aria-label={brand.name}
+                      style={{ marginRight: 8 }}
+                    >
+                      {brand.emoji}
+                    </span>
+                    {brand.name}
+                  </span>
+                }
+                actions={
+                  <span style={{ color: "#E87A41", fontSize: ".97em" }}>
+                    {brand.type} · {brand.country}
+                  </span>
+                }
+                variant="flat"
+              >
+                <div style={{ color: "#bbb", marginBottom: 6 }}>
+                  {brand.desc}
+                </div>
+                {brand.image && (
+                  <img
+                    src={brand.image}
+                    alt={brand.name}
+                    style={{
+                      width: "100px",
+                      borderRadius: "4px",
+                      margin: "7px 0",
+                      display: "block",
+                    }}
+                  />
+                )}
+              </Card>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
