@@ -53,12 +53,23 @@ function MainLayout({
         </nav>
         <main>
           {title && (
-            <div className="container" style={{ paddingTop: 32 }}>
-              <div className="subtitle">{title}</div>
+            <div className="container" style={{ paddingTop: 32, paddingBottom: 0, marginBottom: 0 }}>
+              <div className="subtitle" style={{
+                fontWeight: 700,
+                color: "var(--kavia-orange)",
+                fontSize: "1.37rem",
+                letterSpacing: "0.01em",
+                marginBottom: 8,
+                marginTop: 4
+              }}>{title}</div>
             </div>
           )}
-          {/* Card-based responsive grid */}
-          <div className="container mm-card-grid">{children}</div>
+          {/* Modern, clean card grid */}
+          <div className="container mm-card-grid" style={{
+            marginTop: 0,
+            marginBottom: 0,
+            gap: 32
+          }}>{children}</div>
         </main>
       </div>
     </div>
