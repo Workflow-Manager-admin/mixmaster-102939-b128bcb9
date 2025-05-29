@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "../components/Card";
+import { LIQUOR_BRANDS } from "./liquorBrands";
 
 // --- Mock Data (for search) ---
 
