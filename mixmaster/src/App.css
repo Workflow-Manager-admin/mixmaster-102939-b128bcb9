@@ -211,6 +211,14 @@ body {
   }
   .main-content {
     margin-left: 0;
+    padding-top: 0 !important;
+    min-height: 100dvh;
+    background: var(--kavia-main-bg);
+    /* Make sure content fits behind navbar if sidebar overlays */
+  }
+  .mm-card-grid {
+    gap: 16px !important;
+    padding: 7px 0 16px 0 !important;
   }
 }
 
