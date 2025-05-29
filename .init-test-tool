@@ -1,0 +1,4 @@
+{
+    "command": "npm run test",
+    "working_directory": "/home/kavia/workspace/code-generation/mixmaster-102939-b128bcb9/mixmaster_app"
+}
