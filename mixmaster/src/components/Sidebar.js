@@ -17,7 +17,8 @@ function Sidebar() {
     { to: "/trending", label: "Trending", icon: "📈" },
     { to: "/pairings", label: "Pairings", icon: "🍽️" },
     { to: "/shopping-list", label: "Shopping List", icon: "🛒" },
-    { to: "/ai-bartender", label: "AI Bartender", icon: "🤖" },
+    { to: "/ai-bartender", label: "AI Bartender", icon: "🤖" }
+    // Ensure no duplicate sidebar entries (de-duplication handled by unique route/label).
   ];
 
   return (
