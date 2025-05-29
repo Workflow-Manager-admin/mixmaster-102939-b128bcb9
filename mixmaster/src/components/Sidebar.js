@@ -6,9 +6,12 @@ import "./Sidebar.css";
 function Sidebar() {
   /**
    * Sidebar navigation for MixMaster, using react-router-dom NavLink for routing.
+   * - Streamlined for accessibility, clarity, and real-time feedback.
+   * - Larger touch targets, unique nav items, smooth interaction.
    */
   const [collapsed, setCollapsed] = useState(false);
 
+  // No duplicates; each route unique and clear.
   const navItems = [
     { to: "/explorer", label: "Explorer", icon: "🌎" },
     { to: "/generator", label: "Generator", icon: "⚡" },
@@ -20,8 +23,11 @@ function Sidebar() {
     { to: "/ai-bartender", label: "AI Bartender", icon: "🤖" }
   ];
 
+  // Handle touch feedback (for mobile, e.g., on pointer down/up)
+  const [activeIndex, setActiveIndex] = useState(null);
+
   return (
-    <aside className={`sidebar${collapsed ? " collapsed" : ""}`}>
+    <aside className={`sidebar${collapsed ? " collapsed" : ""}`} aria-label="Primary navigation sidebar">
       <div className="sidebar-header">
         <span
           className="sidebar-logo"
@@ -39,42 +45,40 @@ function Sidebar() {
           aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
           tabIndex={0}
           onClick={() => setCollapsed((val) => !val)}
-          style={{
-            fontWeight: "bold",
-            color: "var(--brand-accent)",
-            fontSize: "1.32rem",
-            background: "none",
-            border: "none",
-            cursor: "pointer"
-          }}
         >
           {collapsed ? "»" : "«"}
         </button>
       </div>
-      <nav className="sidebar-nav">
+      <nav className="sidebar-nav" aria-label="Main menu">
         <ul>
-          {navItems.map((item) => (
+          {navItems.map((item, idx) => (
             <li key={item.to}>
               <NavLink
                 to={item.to}
                 className={({ isActive }) =>
                   "sidebar-link" +
-                  (isActive ? " sidebar-link-active" : "")
+                  (isActive ? " sidebar-link-active" : "") +
+                  (activeIndex === idx ? " sidebar-link-realactive" : "")
                 }
                 aria-label={item.label}
                 tabIndex={0}
                 end={item.to === "/explorer"}
                 style={{
-                  padding: collapsed ? "10px 7px" : "11px 24px",
-                  fontSize: "1.12rem",
-                  gap: "12px",
-                  color: "inherit"
+                  padding: collapsed ? "15px 6px" : "16px 20px",
+                  fontSize: "1.17rem",
+                  gap: "13px",
+                  color: "inherit",
+                  minHeight: "52px",
+                  maxWidth: "100vw"
                 }}
+                onPointerDown={() => setActiveIndex(idx)}
+                onPointerUp={() => setActiveIndex(null)}
+                onPointerLeave={() => setActiveIndex(null)}
               >
                 <span
                   className="sidebar-icon"
                   style={{
-                    fontSize: collapsed ? "1.3rem" : "1.6rem",
+                    fontSize: collapsed ? "1.34rem" : "1.65rem",
                     color: "var(--brand-accent)",
                     marginRight: collapsed ? 0 : 8,
                     minWidth: 28,
@@ -91,8 +95,9 @@ function Sidebar() {
                   <span
                     className="sidebar-label"
                     style={{
-                      fontWeight: 600,
-                      letterSpacing: "0.01em",
+                      fontWeight: 700,
+                      letterSpacing: "0.012em",
+                      fontSize: "1.02em"
                     }}
                   >
                     {item.label}
