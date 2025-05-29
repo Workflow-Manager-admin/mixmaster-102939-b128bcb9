@@ -143,6 +143,43 @@ function LiquorResultCard({ liquor }) {
   );
 }
 
+/**
+ * Card for a liquor brand item (from central module)
+ */
+function BrandResultCard({ brand }) {
+  return (
+    <Card
+      title={
+        <span>
+          <span role="img" aria-label={brand.name} style={{ marginRight: 8 }}>
+            {brand.emoji}
+          </span>
+          {brand.name}
+        </span>
+      }
+      actions={
+        <span style={{ color: "#E87A41", fontSize: ".97em" }}>
+          {brand.type} · {brand.country}
+        </span>
+      }
+    >
+      <div style={{ color: "#bbb", marginBottom: 6 }}>{brand.desc}</div>
+      {brand.image && (
+        <img
+          src={brand.image}
+          alt={brand.name}
+          style={{
+            width: "100px",
+            borderRadius: "4px",
+            margin: "7px 0",
+            display: "block",
+          }}
+        />
+      )}
+    </Card>
+  );
+}
+
 // Card for a cocktail item
 function CocktailResultCard({ cocktail }) {
   return (
