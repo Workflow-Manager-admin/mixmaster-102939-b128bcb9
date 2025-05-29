@@ -58,6 +58,7 @@ function Sidebar() {
                 className={({ isActive }) =>
                   "sidebar-link" +
                   (isActive ? " sidebar-link-active" : "") +
+                  // Real-time tap/click feedback (styled in CSS)
                   (activeIndex === idx ? " sidebar-link-realactive" : "")
                 }
                 aria-label={item.label}
