@@ -1,17 +1,35 @@
-/* Base resets and coding styles */
-* {
+/* Modern CSS baseline + crisp code typography */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* 16px adaptive root baseline */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--kavia-dark, #181924);
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1.06rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  font-family: var(--font-body, 'Inter', 'Segoe UI', Arial, sans-serif);
+  font-size: var(--base-size, 1.09rem);
+  background: var(--kavia-dark, #181924);
+  color: var(--text-color, #fff);
+  line-height: 1.65;
+  letter-spacing: var(--letter-spacing-small);
 }
 
 code {
-  font-family: 'Fira Mono', 'Menlo', 'Monaco', Consolas, 'Courier New', monospace;
+  font-family: var(--font-mono, 'Fira Mono', 'Menlo', 'Monaco', monospace);
+  font-size: 1em;
+  color: var(--brand-accent, #F67280);
+  background: #141423;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: 0 2px;
 }
