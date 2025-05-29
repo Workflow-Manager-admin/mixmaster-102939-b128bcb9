@@ -293,55 +293,62 @@ h4, h5, h6 {
 /* Unified Brand Button Styling */
 .btn {
   background: linear-gradient(
-    96deg, 
-    var(--brand-accent) 0%, 
-    #fb8f99 85%, 
+    95deg,
+    var(--brand-accent) 0%,
+    #fb8f99 80%,
     var(--brand-accent) 100%
   );
   color: #fff;
   border: none;
-  border-radius: 7px;
-  padding: 11px 22px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 10px;
+  padding: 13px 28px;
+  font-size: 1.05rem;
+  font-weight: 700;
   letter-spacing: 0.01em;
   cursor: pointer;
-  box-shadow: 0 1.5px 7px 0 rgba(246, 114, 128, 0.14);
-  transition: background 0.14s, box-shadow 0.14s, transform 0.08s;
+  box-shadow: 0 2px 16px 0 rgba(246,114,128,0.21);
+  transition: background 0.13s, box-shadow 0.12s, transform 0.08s;
   outline: none;
 }
 .btn:hover, .btn:focus {
-  opacity: 0.97;
   background: linear-gradient(
-    96deg,
+    95deg,
     var(--kavia-orange) 0%,
-    var(--brand-accent) 100%
+    var(--brand-accent) 93%
   );
-  box-shadow: 0 3px 14px 0 var(--brand-accent), 0 0.5px 0.5px var(--card-title);
-  transform: translateY(-1.5px) scale(1.025);
+  opacity: 0.99;
+  box-shadow: 0 4px 18px 0 var(--brand-accent), 0 1px 0.5px var(--card-title);
+  transform: translateY(-2.5px) scale(1.04);
+  outline: 2.2px solid var(--focus-color);
 }
 .btn:active {
-  opacity: 0.89;
-  transform: scale(0.98);
-  box-shadow: 0 1px 4px 0 var(--brand-accent);
+  opacity: 0.92;
+  transform: scale(0.986);
+  box-shadow: 0 0.6px 6px 0 var(--brand-accent);
 }
 .btn-large {
-  padding: 15px 29px;
-  font-size: 1.13rem;
-  border-radius: 8px;
+  padding: 17px 34px;
+  font-size: 1.16rem;
+  border-radius: 12px;
 }
 /* Button ghost/accent-outline version */
-.btn-ghost, .btn-outline {
+.btn-ghost,
+.btn-outline {
   background: transparent;
-  border: 2.2px solid var(--brand-accent);
+  border: 2.4px solid var(--brand-accent);
   color: var(--brand-accent);
-  font-weight: 600;
-  border-radius: 7px;
-  transition: background 0.13s, color 0.13s;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: background 0.13s, color 0.13s, border 0.14s;
 }
-.btn-ghost:hover, .btn-outline:hover {
+.btn-ghost:hover,
+.btn-outline:hover,
+.btn-ghost:focus,
+.btn-outline:focus {
   background: var(--brand-accent);
   color: #fff;
+  border-color: var(--kavia-orange);
+  outline: 2px solid #FFD973;
 }
 
 /* Nicer input field for modern look */
