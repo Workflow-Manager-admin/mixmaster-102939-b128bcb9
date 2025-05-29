@@ -1,34 +1,53 @@
 :root {
+  /* Brand & Backgrounds */
   --brand-primary: #1a1a2e;
   --brand-secondary: #16213e;
   --brand-accent: #F67280;
+  --brand-accent-contrast: #FFD973;
+  --brand-accent-dark: #C94C63;
   --kavia-orange: #E87A41;
-  --kavia-dark: #191924;
+  --kavia-dark: #181924;
   --kavia-main-bg: var(--brand-primary);
   --kavia-main-bg-dark: var(--brand-secondary);
-  --kavia-accent: var(--brand-accent);
-  --text-color: #FFF;
-  --text-secondary: rgba(255,255,255,0.72);
-  --border-color: rgba(255, 255, 255, 0.10);
-  --focus-color: #ffb15a;
-  /* Improved Headings */
-  --heading-lg: 2.6rem;
-  --heading-md: 1.55rem;
-  --heading-sm: 1.12rem;
-  --font-body: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono: 'Fira Mono', 'Menlo', 'Monaco', monospace;
-  --font-weight-title: 700;
-  --font-weight-bold: 600;
-  --font-weight-normal: 400;
-  /* Card updates */
-  --card-bg: #222541;
+  --card-bg: #232442;
   --card-border: var(--brand-accent);
   --card-title: var(--brand-accent);
-  --high-contrast-bg: #18182c;
-  --high-contrast-border: #ffb15a;
-  --link-color: #FFD973;
+  --high-contrast-bg: #171730;
+  --high-contrast-border: #FFD973;
   --sidebar-bg: #18182c;
   --sidebar-accent: var(--brand-accent);
+
+  /* Typography – Modern Scaling, Hierarchy, and Clarity */
+  --text-color: #fff;
+  --text-secondary: #E6E7EA;
+  --text-subtle: #b6bad2;
+  --link-color: var(--brand-accent-contrast);
+  --focus-color: #FFD973;
+  --border-color: #242547;
+  --font-body: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Fira Mono', 'Menlo', 'Monaco', monospace;
+  --font-weight-title: 800;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --letter-spacing-small: 0.01em;
+
+  /* Font Sizes – Fluid/ramped for hierarchy */
+  --heading-xl: clamp(2.6rem, 4.2vw, 3.5rem);
+  --heading-lg: clamp(2.09rem, 3vw, 2.55rem);
+  --heading-md: clamp(1.29rem, 2vw, 1.7rem);
+  --heading-sm: 1.13rem;
+  --base-size: 1.09rem;
+  --small-size: 0.98rem;
+  --tiny-size: 0.92rem;
+
+  /* Spacing unified – Bigger for separation, enough for modal comfort */
+  --space-xs: 5px;
+  --space-sm: 11px;
+  --space-md: 23px;
+  --space-lg: 32px;
+
+  --container-max: 940px;
 }
 
 /* Card Layout Styles */
