@@ -198,7 +198,7 @@ body {
 /* Ensure main hero and content don't get hidden behind fixed navbar */
 .main-content .container,
 .container {
-  margin-top: 80px;
+  margin-top: 86px;
 }
 
 
@@ -373,10 +373,11 @@ input[type="search"]:focus {
 
 /* Unify scrollbar for sidebar/main/content (Webkit, fallback) */
 ::-webkit-scrollbar {
-  width: 8px;
-  background: var(--kavia-main-bg);
+  width: 10px;
+  background: var(--kavia-dark);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--brand-accent);
-  border-radius: 5px;
+  border-radius: 9px;
+  border: 2px solid var(--kavia-dark);
 }
