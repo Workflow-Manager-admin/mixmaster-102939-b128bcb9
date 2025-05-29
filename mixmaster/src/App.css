@@ -352,20 +352,23 @@ h4, h5, h6 {
 }
 
 /* Nicer input field for modern look */
-input[type="text"]:not(.mm-card), input[type="search"] {
+input[type="text"]:not(.mm-card),
+input[type="search"] {
   background: var(--card-bg);
-  border: 2.1px solid var(--brand-accent);
+  border: 2.2px solid var(--brand-accent);
   color: #fff;
-  border-radius: 5.5px;
+  border-radius: 8px;
   font-size: 1.08em;
-  padding: 10px 13px;
+  padding: 12px 16px;
   outline: none;
-  transition: border 0.13s;
+  transition: border 0.14s;
   font-weight: 500;
-  box-shadow: 0 0.5px 2.5px 0 rgba(30, 26, 60, 0.08);
+  box-shadow: 0 1px 7px 0 rgba(30, 26, 60, 0.09);
 }
-input[type="text"]:focus, input[type="search"]:focus {
-  border-color: var(--kavia-orange);
+input[type="text"]:focus,
+input[type="search"]:focus {
+  border-color: var(--focus-color);
+  outline: 2px solid var(--focus-color);
 }
 
 /* Unify scrollbar for sidebar/main/content (Webkit, fallback) */
