@@ -18,18 +18,35 @@ function Sidebar() {
     { to: "/pairings", label: "Pairings", icon: "🍽️" },
     { to: "/shopping-list", label: "Shopping List", icon: "🛒" },
     { to: "/ai-bartender", label: "AI Bartender", icon: "🤖" }
-    // Ensure no duplicate sidebar entries (de-duplication handled by unique route/label).
   ];
 
   return (
     <aside className={`sidebar${collapsed ? " collapsed" : ""}`}>
       <div className="sidebar-header">
-        <span className="sidebar-logo" title="MixMaster" style={{ color: "var(--brand-accent)" }}>🍸</span>
+        <span
+          className="sidebar-logo"
+          title="MixMaster"
+          style={{
+            color: "var(--brand-accent)",
+            fontSize: "2.2rem",
+            marginRight: 5,
+            display: "flex",
+            alignItems: "center"
+          }}
+        >🍸</span>
         <button
           className="sidebar-toggle"
           aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
           tabIndex={0}
           onClick={() => setCollapsed((val) => !val)}
+          style={{
+            fontWeight: "bold",
+            color: "var(--brand-accent)",
+            fontSize: "1.32rem",
+            background: "none",
+            border: "none",
+            cursor: "pointer"
+          }}
         >
           {collapsed ? "»" : "«"}
         </button>
@@ -47,9 +64,40 @@ function Sidebar() {
                 aria-label={item.label}
                 tabIndex={0}
                 end={item.to === "/explorer"}
+                style={{
+                  padding: collapsed ? "10px 7px" : "11px 24px",
+                  fontSize: "1.12rem",
+                  gap: "12px",
+                  color: "inherit"
+                }}
               >
-                <span className="sidebar-icon">{item.icon}</span>
-                {!collapsed && <span className="sidebar-label">{item.label}</span>}
+                <span
+                  className="sidebar-icon"
+                  style={{
+                    fontSize: collapsed ? "1.3rem" : "1.6rem",
+                    color: "var(--brand-accent)",
+                    marginRight: collapsed ? 0 : 8,
+                    minWidth: 28,
+                    minHeight: 28,
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    transition: "font-size 0.16s"
+                  }}
+                >
+                  {item.icon}
+                </span>
+                {!collapsed && (
+                  <span
+                    className="sidebar-label"
+                    style={{
+                      fontWeight: 600,
+                      letterSpacing: "0.01em",
+                    }}
+                  >
+                    {item.label}
+                  </span>
+                )}
               </NavLink>
             </li>
           ))}
