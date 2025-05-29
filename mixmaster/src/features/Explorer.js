@@ -1,8 +1,10 @@
 import React from "react";
 import Card from "../components/Card";
+import { LIQUOR_BRANDS } from "./liquorBrands";
 
-// Mock data for demo liquors and mixers
+// Demo liquors/mixers (classic categories)
 const LIQUOR_DATA = [
+  // ... [unchanged, omitted for brevity] ...
   {
     id: "whiskey",
     name: "Whiskey",
@@ -69,6 +71,7 @@ const LIQUOR_DATA = [
   },
 ];
 
+// Card for showing a liquor/mixer category
 function LiquorCard({ liquor }) {
   return (
     <Card
